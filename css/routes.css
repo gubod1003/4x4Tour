@@ -1,0 +1,151 @@
+.routes {
+    padding: 57px 5%;
+    background-color: #F4F4F4;
+  }
+
+.routes_title {
+
+}
+  
+.route-cards {
+    /*display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;*/
+  }
+  
+.route-card {
+    /*background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;*/
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 148px;
+  }
+
+.route-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.route-card_text {
+  flex: 1;
+  max-width: 450px;
+}
+
+.route-card_title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 9px;
+}
+  
+.route-info {
+    /*padding: 1.5rem;*/
+  }
+
+.route-info_price {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
+.route-info_detail {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.route-info_range:before,
+.route-info_time::before {
+    content: '';
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 17px;
+    vertical-align: middle;
+}
+
+
+.route-info_time::before{
+    width: 13px;
+    height: 13px;
+    background-image: url("/img/clock-fill.svg");
+}
+
+.route-info_range:before{
+    width: 12px;
+    height: 14px;
+    background-image: url("/img/map.svg");
+}
+
+.route-info_title {
+}
+
+.route-info_path {
+}
+  
+.route-slider {
+  flex: 1;
+    width: 100%;
+    height: 300px;
+    margin: auto;
+    overflow: hidden;
+    /*box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 9px;*/
+  }
+
+.swiper-slide {
+  transition: transform 0.3s, opacity 0.3s;
+  filter: brightness(0.6); /* Затемнение всех слайдов */
+  height: 250px;
+}
+
+.swiper-slide img {
+  border-radius: 9px; /* Закругление углов */
+}
+
+.swiper-slide-active {
+  filter: brightness(1); /* Активный слайд будет ярче */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Добавление тени */
+  border-radius: 9px; /* Закругление углов */
+  transform: scale(1.1) translateX(-50px); /* Увеличение + сдвиг влево */
+  transition: transform 0.3s ease-in-out;
+}
+  
+.route-buttons {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+  
+.route-btn_book,
+.route-btn_details {
+    flex: 1;
+    background-color: transparent;
+  }
+  
+.route-btn_book {
+    background-color: var(--button-color);
+    color: white;
+  }
+
+.route-btn_details{
+    border: 1px solid var(--button-color);
+    color: var(--button-color);
+}
+
+
+
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-pagination {
+}

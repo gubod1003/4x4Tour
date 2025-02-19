@@ -1,0 +1,57 @@
+:root {
+  --primary-color: #2a9d8f;
+  --text-color: #333;
+  --bg-color: #fff;
+  --font-color:#fff;
+  --button-color:#037E8C;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  color: #151515;
+}
+
+body {
+  font-family: "Montserrat", serif;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    margin: 1rem 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .contacts {
+    grid-template-columns: 1fr;
+  }
+}
+

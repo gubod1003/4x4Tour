@@ -1,0 +1,67 @@
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    z-index: 1000;
+    background-color: transparent;
+  }
+  
+  .nav_link{
+    margin: 0 20px;
+    text-decoration: none;
+    color: var(--font-color);
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  .nav_link:focus-visible,
+  .nav_link:hover {
+    color: #037E8C;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 1);
+  }
+  
+  .contact-phone {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header__phone {
+    background-color: transparent;
+    border: none;
+    color: var(--font-color);
+  }
+  
+  .header__phone-number {
+    padding: 0 13px 0;
+    color:var(--font-color);
+    font-weight: 600;
+    font-size: 20px;
+  }
+  
+  .phone {
+    margin-bottom: 5px;
+  }
+  
+  .phone:hover .header__phone,
+  .phone:hover .header__phone-number,
+  .phone:focus-visible .header__phone,
+  .phone:focus-visible .header__phone-number
+  {
+    color: #037E8C;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 1);
+  }
+  
+  .phone_button {
+  
+    background-color: rgba(255, 255, 255, 0.4); 
+    color: white;
+  }
+  
+  .phone_button:hover,
+  .phone_button:focus-visible {
+    background-color: var(--primary-color);
+  } 

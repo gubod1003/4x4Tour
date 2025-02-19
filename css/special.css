@@ -1,0 +1,69 @@
+.special_title{
+    margin-bottom: 45px;
+}
+
+.special-offers {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+    background: url("../img/mount_bg.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.offers-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.offer {
+    display: flex;
+    justify-content: end;
+    border-radius: 9px;
+    width: 100%;
+    height: 311px;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.4);
+    max-width: 636px;
+}
+
+.offer_bithday {
+    background: url("../img/bithday.jpeg") no-repeat center center;
+    background-size: cover;
+}
+
+.offer-text {
+    text-align: left;
+    padding: 26px 15px;
+    width: 320px;
+}
+
+.offer-text h3 {
+    color: var(--button-color);
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 1.1;
+}
+
+.offer-text h4 {
+    color: #037E8C;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 19px;
+}
+
+.offer-text p {
+    color: #373737;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.offer-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
