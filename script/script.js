@@ -109,5 +109,77 @@ document.addEventListener("DOMContentLoaded", () => {
 
     lastScroll = currentScroll
   })
-})
 
+// Quiz section
+const startBtn = document.querySelector('.quiz__start-btn');
+  const quizIntro = document.querySelector('.quiz__intro');
+  const quizContent = document.querySelector('.quiz__content');
+  const questionText = document.getElementById('question-text');
+  const answerButtons = document.querySelectorAll('.quiz__answer-btn');
+  const nextBtn = document.querySelector('.quiz__next-btn');
+  const prevBtn = document.querySelector('.quiz__prev-btn');
+  const quizResult = document.querySelector('.quiz__result');
+  const quizResultText = document.getElementById('quiz-result-text');
+  const restartBtn = document.querySelector('.quiz__restart-btn');
+
+  let currentQuestion = 0;
+  let userAnswers = [];
+
+  const questions = [
+      { text: "Какой уровень сложности вас интересует?", answers: ["Легкий", "Средний", "Сложный"] },
+      { text: "Какая длительность маршрута вам подходит?", answers: ["1-2 часа", "3-5 часов", "Целый день"] },
+      { text: "Что для вас важнее в маршруте?", answers: ["Красивые виды", "Экстрим", "Исторические места"] }
+  ];
+
+  startBtn.addEventListener('click', () => {
+      quizIntro.classList.add('hidden');
+      quizContent.classList.remove('hidden');
+      loadQuestion();
+  });
+
+  function loadQuestion() {
+      questionText.innerText = questions[currentQuestion].text;
+      answerButtons.forEach((btn, index) => {
+          btn.innerText = questions[currentQuestion].answers[index];
+          btn.dataset.answer = questions[currentQuestion].answers[index];
+      });
+      prevBtn.classList.toggle('hidden', currentQuestion === 0);
+      nextBtn.innerText = currentQuestion === questions.length - 1 ? "Завершить" : "Далее";
+  }
+
+  answerButtons.forEach(button => {
+      button.addEventListener('click', (event) => {
+          userAnswers[currentQuestion] = event.target.dataset.answer;
+      });
+  });
+
+  nextBtn.addEventListener('click', () => {
+      if (currentQuestion < questions.length - 1) {
+          currentQuestion++;
+          loadQuestion();
+      } else {
+          showResult();
+      }
+  });
+
+  prevBtn.addEventListener('click', () => {
+      if (currentQuestion > 0) {
+          currentQuestion--;
+          loadQuestion();
+      }
+  });
+
+  function showResult() {
+      quizContent.classList.add('hidden');
+      quizResult.classList.remove('hidden');
+      quizResultText.innerText = `Ваш выбор: ${userAnswers.join(", ")}. Мы подберем маршрут для вас!`;
+  }
+
+  restartBtn.addEventListener('click', () => {
+      quizResult.classList.add('hidden');
+      quizIntro.classList.remove('hidden');
+      currentQuestion = 0;
+      userAnswers = [];
+  });
+
+})

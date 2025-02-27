@@ -196,6 +196,38 @@
                 <!-- More route cards -->
             </div>
         </section>
+
+        <section class="quiz">
+            <div class="quiz__intro">
+                <h2 class="title quiz_title">Затрудняетесь выбрать маршрут?</h2>
+                <p class="quiz_info">Пройдите тест, и мы подберем для вас оптимальную экскурсию</p>
+                <button class="quiz__start-btn button">Начать тест</button>
+            </div>
+        
+            <div class="quiz__content hidden">
+                <div class="quiz__question">
+                    <h3 id="question-text" class="title question_title">Какой уровень сложности вас интересует?</h3>
+                    <ul class="quiz__answers">
+                        <li><button class="quiz__answer-btn button" data-answer="Легкий">Легкий</button></li>
+                        <li><button class="quiz__answer-btn button" data-answer="Средний">Средний</button></li>
+                        <li><button class="quiz__answer-btn button" data-answer="Сложный">Сложный</button></li>
+                    </ul>
+                </div>
+        
+                <div class="quiz__controls">
+                    <button class="quiz__prev-btn hidden button">Назад</button>
+                    <button class="quiz__next-btn button">Далее</button>
+                </div>
+            </div>
+        
+            <div class="quiz__result hidden">
+                <h3 class="title quiz_title">Ваш идеальный маршрут:</h3>
+                <p id="quiz-result-text" class="quiz_info"></p>
+                <button class="quiz__restart-btn button">Пройти снова</button>
+            </div>
+        </section>
+        
+        
     
         <section id="gallery" class="photo-gallery">
             <h2 class="title gallery_title">Фото</h2>
